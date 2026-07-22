@@ -7,9 +7,6 @@ Purpose
 This document outlines commands, theory, troubleshooting and verification for the creation and configurations of ssh on a linux based server.
 Scope
 The document is intended for system and information technology administrators who want to learn and understand ssh and the proccess of creating keys.
-Objects a
-[Describe who this document applies to and under what circumstances.]
-[Describe detailed objectives will be achieved thru this SOP.]
 
 Definitions
 SSH - Secured shell
@@ -53,4 +50,7 @@ https://docs.diploi.com/building/add-ssh-key
 https://phoenixnap.com/kb/openssl-tutorial-ssl-certificates-private-keys-csrs
 https://www.ssh.com/academy/ssh/sshd
 https://itsfoss.com/linux-daemons/
+
 Revision History
+Document fully completed on 7/22/2026
+No other changes have been made
