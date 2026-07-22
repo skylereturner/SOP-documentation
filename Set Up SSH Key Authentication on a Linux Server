@@ -20,8 +20,10 @@ Procedure steps
 [Describe each step of the procedure and mention any known hazards or difficulties.]
 Step 1: update the package manager - sudo apt udpate
 Step 2: install the firewall package onto the server - sudo apt install ufw -y
-Step 3: allow ssh to be allowed pass the firewall - sudo ufw allow ssh
-Step 4: enable the firewall - sudo ufw enable
+Step 3: enable the firewall - sudo ufw enable
+Step 4: Enable the sshd - sudo systemctl enable ssh --now
+Step 5: allow ssh to be allowed pass the firewall - sudo ufw allow ssh
+Step 6: Confirm your IP address is correct an able to ping gateway address - ip a, ip r and ping 
 
 
 Commands:
@@ -48,12 +50,11 @@ Verification:
 Troubleshooting:
 check if the firewall is online - sudo ufw status verbose or sudo systemctl status ufw
 reload firewall refresh changes if needed - sudo ufw reload
+Check if the sshd is online - sudo systemctl status ssh or sudo systemctl status sshd
+
 Security Considerations:
+Check the open ports on the Linux server - sudo ss -tupln
 
 References
 
 Revision History
-
-
-
-
