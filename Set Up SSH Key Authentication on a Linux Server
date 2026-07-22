@@ -24,34 +24,19 @@ Step 3: enable the firewall - sudo ufw enable
 Step 4: Enable the sshd - sudo systemctl enable ssh --now
 Step 5: allow ssh to be allowed pass the firewall - sudo ufw allow ssh
 Step 6: Confirm your IP address is correct an able to ping gateway address - ip a, ip r and ping 
-
-
-Commands:
-sudo systemctl enable --now ssh
-sudo systemctl status ssh
-sudo apt update && sudo apt install ufw -y
-sudo ufw enable
-sudo ufw status verbose
-ip a
-nmcli device status
-nmcli connection show
-nmcli device connect eth0
-nmcli device wifi connect "Wi-Fi_name" password "PASSWORD"
-sudo nano /etc/NetworkManager/NetworkManager.conf
-sudo systemctl restart NetworkManager
-ipr 
-
-Screenshots:
+Step 7: Try to SSH into the remote server - ssh username@Device name/ IP address of device
+Step 8: Create SSH keys on your local machine - ssh-keygen
+Step 9: copy the SSH keys into your remote server - ssh-copy-id username@Device name/IP address of device
 
 Expected Results:
-
+The expected result
 Verification:
 
 Troubleshooting:
 check if the firewall is online - sudo ufw status verbose or sudo systemctl status ufw
 reload firewall refresh changes if needed - sudo ufw reload
 Check if the sshd is online - sudo systemctl status ssh or sudo systemctl status sshd
-
+Network Configuration commands - nmcli connection show, nmcli device status, sudo systemctl restart NetworkManager
 Security Considerations:
 Check the open ports on the Linux server - sudo ss -tupln
 
