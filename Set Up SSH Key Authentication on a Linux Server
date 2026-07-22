@@ -12,8 +12,12 @@ Objects a
 [Describe detailed objectives will be achieved thru this SOP.]
 
 Definitions
-[Define any unknown words or acronyms that can help the reader understand this SOP.]
-
+SSH - Secured shell
+ufw - uncomplicated firewall
+SSHD - Secured shell daemon
+Daemon - A proccess that runes in the background
+IP - Internet protocol
+SSH into remote server - The user you used to log in @ the name of your device or IP address of remote server
 
 
 Procedure steps
@@ -29,7 +33,7 @@ Step 8: Create SSH keys on your local machine - ssh-keygen
 Step 9: copy the SSH keys into your remote server - ssh-copy-id username@Device name/IP address of device
 
 Expected Results:
-The expected result
+You should be able to ssh into the remote server using the username and device name/IP address of the device without having to type 
 Verification:
 
 Troubleshooting:
