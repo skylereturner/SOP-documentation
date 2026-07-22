@@ -2,9 +2,6 @@ Standard operating procedure
 MITT 
 30 Steven Street 
 204-823-3185
-Reversion info: 
-
-Approved Table: 
 
 Purpose
 This document outlines commands, theory, troubleshooting and verification for the creation and configurations of ssh on a linux based server.
@@ -21,6 +18,13 @@ Definitions
 
 Procedure steps
 [Describe each step of the procedure and mention any known hazards or difficulties.]
+Step 1: update the package manager - sudo apt udpate
+Step 2: install the firewall package onto the server - sudo apt install ufw -y
+Step 3: allow ssh to be allowed pass the firewall - sudo ufw allow ssh
+Step 4: enable the firewall - sudo ufw enable
+
+
+Commands:
 sudo systemctl enable --now ssh
 sudo systemctl status ssh
 sudo apt update && sudo apt install ufw -y
@@ -35,14 +39,21 @@ sudo nano /etc/NetworkManager/NetworkManager.conf
 sudo systemctl restart NetworkManager
 ipr 
 
+Screenshots:
 
-change keys
-Step 1:
-Step 2:
-Step 3:
-Step 4:
-Step 5:
-Reference or Related Documents
-[Any other documents related to this SOP.]
+Expected Results:
+
+Verification:
+
+Troubleshooting:
+check if the firewall is online - sudo ufw status verbose or sudo systemctl status ufw
+reload firewall refresh changes if needed - sudo ufw reload
+Security Considerations:
+
+References
+
+Revision History
+
+
 
 
