@@ -18,13 +18,14 @@ SSH into remote server - The user you used to log in @ the name of your device o
 
 
 Procedure steps
-[Describe each step of the procedure and mention any known hazards or difficulties.]
+On both Server and local computer
 Step 1: update the package manager - sudo apt udpate
 Step 2: install the firewall package onto the server - sudo apt install ufw -y
 Step 3: enable the firewall - sudo ufw enable
 Step 4: Enable the sshd - sudo systemctl enable ssh --now
 Step 5: allow ssh to be allowed pass the firewall - sudo ufw allow ssh
 Step 6: Confirm your IP address is correct an able to ping gateway address - ip a, ip r and ping 
+Only on local computer
 Step 7: Try to SSH into the remote server - ssh username@Device name/ IP address of device
 Step 8: Create SSH keys on your local machine - ssh-keygen
 Step 9: copy the SSH keys into your remote server - ssh-copy-id username@Device name/IP address of device
