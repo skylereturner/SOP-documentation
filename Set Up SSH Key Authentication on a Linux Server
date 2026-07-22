@@ -33,9 +33,9 @@ Step 8: Create SSH keys on your local machine - ssh-keygen
 Step 9: copy the SSH keys into your remote server - ssh-copy-id username@Device name/IP address of device
 
 Expected Results:
-You should be able to ssh into the remote server using the username and device name/IP address of the device without having to type 
+You should be able to ssh into the remote server using the username and device name/IP address of the device without having to type in any passwords.
 Verification:
-
+After typing in the user and device you want to remotely configure you can see the user and device that you wanted to remote into.
 Troubleshooting:
 check if the firewall is online - sudo ufw status verbose or sudo systemctl status ufw
 reload firewall refresh changes if needed - sudo ufw reload
@@ -45,5 +45,12 @@ Security Considerations:
 Check the open ports on the Linux server - sudo ss -tupln
 
 References
-
+https://www.digitalocean.com/community/tutorials/how-to-configure-ssh-key-based-authentication-on-a-linux-server
+https://www.sectigo.com/blog/what-is-an-ssh-key
+https://www.sweharris.org/post/2016-09-05-sshkeys/
+https://kodekloud.com/blog/how-to-generate-ssh-keys-and-use-them-with-github/
+https://docs.diploi.com/building/add-ssh-key
+https://phoenixnap.com/kb/openssl-tutorial-ssl-certificates-private-keys-csrs
+https://www.ssh.com/academy/ssh/sshd
+https://itsfoss.com/linux-daemons/
 Revision History
