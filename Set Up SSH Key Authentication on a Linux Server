@@ -7,16 +7,36 @@ Reversion info:
 Approved Table: 
 
 Purpose
-[Briefly describe the reason you are writing this SOP and any broad information about the procedure.]
+This document outlines commands, theory, troubleshooting and verification for the creation and configurations of ssh on a linux based server.
 Scope
+The document is intended for system and information technology administrators who want to learn and understand ssh and the proccess of creating keys.
+Objects a
 [Describe who this document applies to and under what circumstances.]
 [Describe detailed objectives will be achieved thru this SOP.]
-Accountability Matrix
-[Include all stockholders who responsible to this SOP contribution.]
+
 Definitions
 [Define any unknown words or acronyms that can help the reader understand this SOP.]
+
+
+
 Procedure steps
 [Describe each step of the procedure and mention any known hazards or difficulties.]
+sudo systemctl enable --now ssh
+sudo systemctl status ssh
+sudo apt update && sudo apt install ufw -y
+sudo ufw enable
+sudo ufw status verbose
+ip a
+nmcli device status
+nmcli connection show
+nmcli device connect eth0
+nmcli device wifi connect "Wi-Fi_name" password "PASSWORD"
+sudo nano /etc/NetworkManager/NetworkManager.conf
+sudo systemctl restart NetworkManager
+ipr 
+
+
+change keys
 Step 1:
 Step 2:
 Step 3:
